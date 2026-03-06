@@ -1,0 +1,90 @@
+/* Inverted theme classes for preview template */
+body.inverted-theme {
+    background-color: #F8F8F8 !important;
+    color: #1A1E25 !important;
+}
+
+body.inverted-theme h1,
+body.inverted-theme h2,
+body.inverted-theme h3,
+body.inverted-theme h4,
+body.inverted-theme h5,
+body.inverted-theme h6,
+body.inverted-theme p,
+body.inverted-theme span,
+body.inverted-theme a {
+    color: #1A1E25 !important;
+}
+
+body.inverted-theme .navbar {
+    background-color: #FFFFFF !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.inverted-theme .navbar .menu-text {
+    color: #1A1E25 !important;
+}
+
+body.inverted-theme .han-burger,
+body.inverted-theme .han-burger::before,
+body.inverted-theme .han-burger::after {
+    background-color: #1A1E25 !important;
+}
+
+body.inverted-theme .navbar img.flex {
+    filter: invert(1) !important;
+}
+
+body.inverted-theme .button-header a {
+    color: #1A1E25 !important;
+}
+
+body.inverted-theme .main-button {
+    border-color: #1A1E25 !important;
+}
+
+body.inverted-theme .main-button:hover {
+    background-color: #1A1E25 !important;
+}
+
+body.inverted-theme .main-button:hover a {
+    color: #F8F8F8 !important;
+}
+
+body.inverted-theme .header-tint {
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0.4) 0%, rgba(248, 248, 248, 1) 100%) !important;
+}
+
+body.inverted-theme .menu-bg {
+    background-color: #F8F8F8 !important;
+}
+
+body.inverted-theme footer {
+    background-color: #FFFFFF !important;
+    margin-top: 5rem;
+}
+
+body.inverted-theme footer .footer-logo img {
+    filter: invert(1) !important;
+}
+
+body.inverted-theme footer img {
+    filter: invert(1);
+    /* Need to ensure child images invert except 60947.png which might be already dark ? No, it was white */
+}
+
+body.inverted-theme footer .footer-line {
+    background-color: rgba(26, 30, 37, 0.2) !important;
+}
+
+body.inverted-theme .spec-nav {
+    background-color: #e0e0e0 !important;
+    color: #1A1E25 !important;
+}
+
+body.inverted-theme .spec-nav .active-spec {
+    background-color: #1A1E25 !important;
+    color: #F8F8F8 !important;
+}

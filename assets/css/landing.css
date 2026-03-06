@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+/*Hero 1*/
+.header {
+  z-index: 1;
+  position: relative;
+  padding-top: 0;
+  background-color: transparent;
+  display: flex;
+  /* 👈 This makes direct children flex items */
+  align-items: center;
+}
+
+header {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  width: 100%;
+  padding-top: 100px;
+}
+
+header .maxw {
+  width: 100%;
+}
+
+.dest-intro-col {
+  grid-column: span 6;
+}
+
+header video,
+header img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: 0.9s;
+}
+
+.video-mobile {
+  display: none;
+}
+
+.video-desktop {
+  display: block;
+}
+
+.header-tint {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0%;
+  width: 100%;
+  transition: 0.9s;
+  opacity: 0.9;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #132b51 100%);
+}
+
+.header-text {
+  transition-duration: 1s;
+  transition-delay: 0.7s;
+  transition-property: opacity, padding-top, height;
+  height: 0;
+  opacity: 0;
+  overflow: clip;
+  text-align: center;
+  grid-column: span 12;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: span 12;
+  align-items: center;
+}
+
+.header-text h1 {
+  text-align: start;
+  margin-top: 4px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.header-text-eyebrow {
+  font-family: "TT Norms Pro Expanded";
+  font-size: 18px;
+  color: white;
+}
+
+.header-loaded .header-text {
+  height: 100%;
+  opacity: 100%;
+}
+
+.header-loaded .header-tint {
+  height: 100%;
+}
+
+.header-loaded img {
+  height: 100%;
+}
+
+.header-loaded video {
+  height: 100%;
+}
+
+.landing-content .grid {
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  row-gap: 70px;
+}
+
+.landing-content-element {
+  grid-column: span 6;
+  display: block;
+}
+
+.landing-content-element-wrapper {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.landing-content-element-wrapper img {
+  scale: 1.05;
+  transition: 1s;
+}
+
+.landing-content-element-wrapper:hover img {
+  scale: 1;
+}
+
+.landing-content-element-holder {
+  padding-top: 60%;
+  position: relative;
+}
+
+.landing-content-element-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-content-element-text .button-header {
+  margin-right: 0px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.landing-content-element-text .button-header div {
+  color: #1B1E2B;
+}
+
+.landing-content-label {
+  color: #1B1E2B;
+  text-transform: uppercase;
+}
+
+.landing-content-heading {
+  color: #1B1E2B;
+  text-align: center;
+  font-weight: 700;
+  width: 60%;
+  margin-top: 12px;
+}
+
+.button-black {
+  margin-top: 14px;
+  color: #1B1E2B;
+  border: 1px solid #1B1E2B;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-black div {
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+.button-black div img {
+  margin-left: 6px;
+  transition: 0.3s;
+  height: 18px;
+  width: 18px;
+}
+
+.button-black:hover {
+  background-color: #1B1E2B;
+  color: white;
+}
+
+.button-black:hover img {
+  filter: brightness(10000%);
+}
+
+.reveal-first-2 {
+  opacity: 0;
+  margin-top: 32px;
+  transition-delay: 0.8s;
+  transition-duration: 0.8s;
+}
+
+.reveal-first-2-loaded {
+  opacity: 1;
+  margin-top: 0px;
+}
+
+.r-f-2 {
+  transition-delay: 1.1s;
+}
+
+@media screen and (max-width: 768px) {
+  .landing-content-element {
+    grid-column: span 12;
+    display: block;
+  }
+
+  .dest-intro-col {
+    grid-column: span 12;
+    margin-top: 40px;
+  }
+
+  .landing-content .grid {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    row-gap: 60px;
+  }
+
+  .landing-content-label {
+    text-align: center;
+  }
+
+  .landing-content-heading {
+    width: 80%;
+    margin-top: 12px;
+  }
+
+  .landing-content-element-text .button-black {
+    margin-top: 18px;
+  }
+
+  .landing-content-element-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .landing-content-element-holder {
+    padding-top: 90%;
+  }
+
+  header {
+    height: 80vh;
+    padding-top: 50px;
+  }
+}
+
+/*# sourceMappingURL=landing.css.map */

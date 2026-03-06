@@ -1,0 +1,248 @@
+/* Crew Page Styles */
+
+/* ==================
+   Header / Hero Styles (from about.css)
+   ================== */
+.header {
+    z-index: 1;
+    position: relative;
+    padding-top: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    height: 100svh;
+    display: flex;
+    align-items: end;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+header .maxw {
+    width: 100%;
+}
+
+header video,
+header img {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 0.9s;
+}
+
+.video-mobile {
+    display: none;
+}
+
+.video-desktop {
+    display: block;
+}
+
+.header-tint {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    transition: 0.9s;
+    opacity: 0.9;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #132b51 100%);
+}
+
+.header-text {
+    transition-duration: 1s;
+    transition-delay: 0.7s;
+    transition-property: opacity, padding-top, height;
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+    text-align: center;
+    grid-column: span 12;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 8;
+    align-items: start;
+}
+
+.header-text h1 {
+    text-align: start;
+    margin-top: 4px;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.header-text-eyebrow {
+    font-family: "TT Norms Pro Expanded";
+    font-size: 18px;
+    color: white;
+}
+
+.header-loaded .header-text {
+    height: 100%;
+    opacity: 100%;
+}
+
+.header-loaded .header-tint {
+    height: 100%;
+}
+
+.header-loaded img {
+    height: 100%;
+}
+
+.header-loaded video {
+    height: 100%;
+}
+
+/* ==================
+   Basic Layout
+   ================== */
+.section-crew .grid {
+    row-gap: 48px;
+}
+
+
+/* ==================
+   Crew Card
+   ================== */
+.crew-card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 3;
+    /* Optional: add background or shadow if desired, sticking to clean design for now */
+}
+
+/* Image */
+.crew-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    /* Slightly taller than square or based on images */
+    overflow: hidden;
+    margin-bottom: 18px;
+    background-color: #f0f0f0;
+    /* placeholder bg */
+}
+
+.crew-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.crew-card:hover .crew-image-wrapper img {
+    transform: scale(1.03);
+}
+
+/* Text Info */
+.crew-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Left align */
+}
+
+/* Name: same font as p in general.css */
+/* p in general.css is "TT Norms Pro Expanded" */
+.crew-name {
+    font-family: "TT Norms Pro Expanded", sans-serif;
+    font-size: 22px;
+    /* Adjusted for hierarchy */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-dark, #1A1E2B);
+    margin: 0;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Position: same font as header elements */
+/* Headers use "aviano-sans" */
+.crew-position {
+    font-family: "aviano-sans", sans-serif;
+    font-size: 13px;
+    /* Smaller font */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-dark, #1A1E2B);
+    opacity: 0.7;
+}
+
+
+/* ==================
+   Responsive
+   ================== */
+
+@media screen and (max-width: 1524px) {
+    header {
+        padding-bottom: 60px;
+    }
+}
+
+/* Tablet (2 columns) */
+@media (max-width: 1024px) {
+    .section-crew .grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem 1.5rem !important;
+    }
+
+    .crew-card {
+        grid-column: span 1 !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-text h1 {
+        margin-top: 8px;
+    }
+
+    .header-text-eyebrow {
+        font-size: 15px;
+    }
+
+    .header-text {
+        grid-column: span 12;
+    }
+
+    header {
+        padding-bottom: 50px;
+    }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 500px) {
+    .header-text {
+        grid-column: span 12;
+    }
+
+    .section-crew .grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        row-gap: 36px !important;
+    }
+
+    .crew-card {
+        grid-column: span 1 !important;
+    }
+
+    .crew-image-wrapper {
+        margin-bottom: 16px;
+    }
+}
